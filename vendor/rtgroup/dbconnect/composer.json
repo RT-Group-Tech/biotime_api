@@ -1,0 +1,19 @@
+{
+    "name": "rtgroup/dbconnect",
+    "description": "Bibliothèque pour la gestion de la base des données et actions sql",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Rtgroup\\Dbconnect\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Chris Tenday",
+            "email": "ctenday@gmail.com"
+        }
+    ],
+    "require": {
+        "php":">=7.0"
+    }
+}

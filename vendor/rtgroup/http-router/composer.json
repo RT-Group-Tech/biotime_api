@@ -1,0 +1,20 @@
+{
+    "name": "rtgroup/http-router",
+    "description": "Composant de gestion & routage de requete http",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Rtgroup\\HttpRouter\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Chris Tenday",
+            "email": "ctenday@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.0",
+        "curl/curl": "^2.5"
+    }
+}

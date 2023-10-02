@@ -1,0 +1,20 @@
+{
+    "name": "biotime/api",
+    "autoload": {
+        "psr-4": {
+            "Biotime\\Api\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Gaston Delimond"
+        }
+    ],
+    "require": {
+        "rtgroup/dbconnect": "dev-master",
+        "rtgroup/http-router": "dev-master"
+    },
+    "repositories": [
+
+    ]
+}
