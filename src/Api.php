@@ -277,6 +277,7 @@ class Api extends IApi
      * @param string $url
      * @return void
      * @throws Exception
+     * @throws GuzzleException
      */
     private function getRequest(string $url) : void{
         $token = $this->getHeader('Authorization');
