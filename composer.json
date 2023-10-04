@@ -1,8 +1,9 @@
 {
-    "name": "biotime/api",
+    "name": "rtgroup/biotime-api",
+    "type": "library",
     "autoload": {
         "psr-4": {
-            "Biotime\\Api\\": "src/"
+            "Rtgroup\\BiotimeApi\\": "src/"
         }
     },
     "authors": [

@@ -1,11 +1,11 @@
 <?php
 
-namespace Biotime\Api;
+namespace Rtgroup\BiotimeApi\Api;
 
-use Biotime\Api\Core\Util;
-use Biotime\Api\Interfaces\IApi;
 use Exception;
 use GuzzleHttp\Exception\GuzzleException;
+use Rtgroup\BiotimeApi\Core\Util;
+use Rtgroup\BiotimeApi\Interfaces\IApi;
 use Rtgroup\Dbconnect\Dbconfig;
 use Rtgroup\Dbconnect\Dbconnect;
 use Rtgroup\HttpRouter\DataLoader;
@@ -86,6 +86,7 @@ class Api extends IApi
     /**
      * GET List of all Devices
      * @throws Exception
+     * @throws GuzzleException
      */
     public function getDevices(): void
     {
@@ -97,6 +98,7 @@ class Api extends IApi
      * GET List of all employees
      *
      * @throws Exception
+     * @throws GuzzleException
      */
     public function getEmployees(): void
     {
@@ -172,6 +174,7 @@ class Api extends IApi
      * List of all Department
      *
      * @throws Exception
+     * @throws GuzzleException
      */
     public function getDepartments(): void
     {
@@ -184,6 +187,7 @@ class Api extends IApi
      * CREATE New Area
      *
      * @throws Exception
+     * @throws GuzzleException
      */
     public function createArea(): void
     {
@@ -215,6 +219,7 @@ class Api extends IApi
      * List of all Areas
      *
      * @throws Exception
+     * @throws GuzzleException
      */
     public function getAreas(): void
     {
@@ -227,6 +232,7 @@ class Api extends IApi
      * Synchronize all devices data
      * @return void
      * @throws Exception
+     * @throws GuzzleException
      */
     public function uploadAll(): void
     {
@@ -239,6 +245,7 @@ class Api extends IApi
      * Transaction upload
      * @return void
      * @throws Exception
+     * @throws GuzzleException
      */
     public function uploadTransaction(): void
     {
@@ -297,6 +304,7 @@ class Api extends IApi
 
     /**
      * @throws Exception
+     * @throws GuzzleException
      */
     private function triggerUpload(string $url):void
     {

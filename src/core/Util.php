@@ -1,6 +1,6 @@
 <?php
 
-namespace Biotime\Api\Core;
+namespace Rtgroup\BiotimeApi\Core;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
