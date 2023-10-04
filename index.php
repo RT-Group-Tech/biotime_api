@@ -19,7 +19,7 @@ $router = new HttpRouter();
 try
 {
 
-    $router->listening(urls: ["api/uploadAll"], controller: new TestController());
+    $router->listening(urls: ["api/uploadAll", "api/test"], controller: new TestController());
     $router->listening(urls: ["api/uploadTransaction"], controller: new TestController());
 
     /**

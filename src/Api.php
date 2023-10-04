@@ -4,6 +4,8 @@ namespace Biotime\Api;
 
 use Biotime\Api\Core\Util;
 use Biotime\Api\Interfaces\IApi;
+use Exception;
+use GuzzleHttp\Exception\GuzzleException;
 use Rtgroup\Dbconnect\Dbconfig;
 use Rtgroup\Dbconnect\Dbconnect;
 use Rtgroup\HttpRouter\DataLoader;
@@ -26,12 +28,14 @@ class Api extends IApi
 
     /**
      * GET JWT AUth token from Biotime authenticate
-     **/
+     *
+     * @throws Exception
+     */
     public function jwtAuthToken(): void
     {
         if(!HttpRequest::isPost())
         {
-            throw new \Exception("forbidden request.",404);
+            throw new Exception("forbidden request.",404);
         }
 
         /** Verification des données entrées requises */
@@ -74,14 +78,14 @@ class Api extends IApi
     {
         if(!HttpRequest::isPost())
         {
-            throw new \Exception("forbidden request.",404);
+            throw new Exception("forbidden request.",404);
         }
 
     }
 
     /**
      * GET List of all Devices
-     * @throws \Exception
+     * @throws Exception
      */
     public function getDevices(): void
     {
@@ -92,7 +96,7 @@ class Api extends IApi
     /**
      * GET List of all employees
      *
-     * @throws \Exception
+     * @throws Exception
      */
     public function getEmployees(): void
     {
@@ -102,12 +106,14 @@ class Api extends IApi
 
     /**
      * CREATE New employee
-     **/
+     *
+     * @throws Exception
+     */
     public function createEmployee(): void
     {
         if(!HttpRequest::isPost())
         {
-            throw new \Exception("forbidden request.",404);
+            throw new Exception("forbidden request.",404);
         }
         HttpRequest::checkRequiredData("matricule");
         HttpRequest::checkRequiredData("nom");
@@ -136,15 +142,16 @@ class Api extends IApi
             "fingerprint" => "",
         ];
         $token = $this->getHeader('Authorization');
+        $url = 'http://127.0.0.1:8081/personnel/api/employees/';
         if($token != null){
-            $result= Util::post('http://127.0.0.1:8081/personnel/api/employees/', data:$data, token: $token);
+            $result= Util::post(url:$url, data:$data, token: $token);
             $this->loadData("response", [
                 "status"=>"success",
                 "results"=>$result
             ]);
         }
         else{
-            throw new \Exception("token invalide.",203);
+            throw new Exception("token invalide.",203);
         }
 
     }
@@ -156,7 +163,7 @@ class Api extends IApi
     {
         if(!HttpRequest::isPost())
         {
-            throw new \Exception("forbidden request.",404);
+            throw new Exception("forbidden request.",404);
         }
         // TODO: Implement createDepartment() method.
     }
@@ -164,7 +171,7 @@ class Api extends IApi
     /**
      * List of all Department
      *
-     * @throws \Exception
+     * @throws Exception
      */
     public function getDepartments(): void
     {
@@ -175,12 +182,14 @@ class Api extends IApi
 
     /**
      * CREATE New Area
-     **/
+     *
+     * @throws Exception
+     */
     public function createArea(): void
     {
         if(!HttpRequest::isPost())
         {
-            throw new \Exception("forbidden request.",404);
+            throw new Exception("forbidden request.",404);
         }
         HttpRequest::checkRequiredData("code_zone");
         HttpRequest::checkRequiredData("libelle_zone");
@@ -198,14 +207,14 @@ class Api extends IApi
             ]);
         }
         else{
-            throw new \Exception("token invalide.",203);
+            throw new Exception("token invalide.",203);
         }
     }
 
     /**
      * List of all Areas
      *
-     * @throws \Exception
+     * @throws Exception
      */
     public function getAreas(): void
     {
@@ -217,7 +226,7 @@ class Api extends IApi
     /**
      * Synchronize all devices data
      * @return void
-     * @throws \Exception
+     * @throws Exception
      */
     public function uploadAll(): void
     {
@@ -229,7 +238,7 @@ class Api extends IApi
     /**
      * Transaction upload
      * @return void
-     * @throws \Exception
+     * @throws Exception
      */
     public function uploadTransaction(): void
     {
@@ -267,7 +276,7 @@ class Api extends IApi
      * Execute GET Request to load datas from Biotime API
      * @param string $url
      * @return void
-     * @throws \Exception
+     * @throws Exception
      */
     private function getRequest(string $url) : void{
         $token = $this->getHeader('Authorization');
@@ -280,16 +289,19 @@ class Api extends IApi
             ]);
         }
         else{
-            throw new \Exception("token invalide.",203);
+            throw new Exception("token invalide.",203);
         }
     }
 
 
+    /**
+     * @throws Exception
+     */
     private function triggerUpload(string $url):void
     {
         if(!HttpRequest::isPost())
         {
-            throw new \Exception("forbidden request.",404);
+            throw new Exception("forbidden request.",404);
         }
         $data=[];
 
@@ -305,8 +317,21 @@ class Api extends IApi
             ]);
         }
         else{
-            throw new \Exception("token invalide.",203);
+            throw new Exception("token invalide.",203);
         }
+    }
+
+    /**
+     * @throws GuzzleException
+     */
+    public function testRequest(): void
+    {
+        $results = Util::fetch("https://jsonplaceholder.typicode.com/posts");
+        $this->loadData("response", [
+            "status"=>"success",
+            "results"=>$results
+        ]);
+
     }
 
 

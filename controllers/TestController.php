@@ -32,6 +32,7 @@ class TestController extends Controller{
         switch($url)
         {
             case "api/uploadAll": $this->api->uploadAll(); break;
+            case "api/test": $this->api->testRequest(); break;
             case "api/uploadTransaction": $this->api->uploadTransaction(); break;
         }
     }

@@ -2,6 +2,8 @@
 
 namespace Biotime\Api\Core;
 
+use GuzzleHttp\Client;
+use GuzzleHttp\Exception\GuzzleException;
 use Rtgroup\Dbconnect\Dbconfig;
 use Rtgroup\Dbconnect\Dbconnect;
 
@@ -23,50 +25,40 @@ class Util
      * Appel les requetes GET de biotime
      * @param string $url biotime api url
      * @return mixed biotime jsonData
-     **/
-    public static function fetch(string $url, $token=null):mixed
+     *
+     * @throws GuzzleException
+     */
+    public static function fetch(string $url, $token=null) :mixed
     {
-        $options=array(
-            'http' => array(
-                'method'  => 'GET',
-                'header'  => $token !==null
-                    ? "Content-type: application/json\r\n"."Authorization: $token"
-                    : "Content-type: application/json\r\n",
-            ),
-        );
-        $context = stream_context_create(options: $options);
-        $results = file_get_contents($url, false, $context);
-        if(!$results){
-            return null;
-        }
-        return json_decode($results);
+        $client = new Client();
+        $response = $client->request(method: 'GET', uri: $url,options: [
+            'headers' => [
+                'Authorization'=>$token,
+                'Accept'     => 'application/json',
+            ]
+        ]);
+        return json_decode($response->getBody());
     }
-
 
 
     /**
      * Appel les request POST de biotime
      * @param string $url biotime api url
      * @return mixed biotime jsonData
-     **/
+     *
+     * @throws GuzzleException
+     */
 
     public static function post(string $url, Array $data, $token=null) : mixed
     {
-        $options=array(
-            'http' => array(
-                'method'  => 'POST',
-                'header'  => $token !==null
-                    ? "Content-type: application/x-www-form-urlencoded\r\n"."Authorization: $token"
-                    : "Content-type: application/x-www-form-urlencoded\r\n",
-                'content' => http_build_query($data)
-            ),
-        );
-        $context = stream_context_create(options: $options);
-        $results= file_get_contents($url,false,$context);
-        if(!$results){
-            return null;
-        }
-        return json_decode($results);
+        $client = new Client();
+        $response = $client->request(method: 'POST', uri: $url,options: [
+            'headers' => [
+                'Authorization'=>$token,
+                'Accept'     => 'application/json',
+            ],
+            'form_params'=>$data
+        ]);
+        return json_decode($response->getBody());
     }
-
 }
