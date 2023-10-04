@@ -29,7 +29,7 @@ class Api extends IApi
     /**
      * GET JWT AUth token from Biotime authenticate
      *
-     * @throws Exception
+     * @throws Exception|GuzzleException
      */
     public function jwtAuthToken(): void
     {
