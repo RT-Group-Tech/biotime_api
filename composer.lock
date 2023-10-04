@@ -599,12 +599,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/RT-Group-Tech/dbconnect.git",
-                "reference": "5f75e457d9e522c9b080526e83e9c098ad015756"
+                "reference": "781a14f4d392ab4f7e2b667d28d8d96537891b46"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RT-Group-Tech/dbconnect/zipball/5f75e457d9e522c9b080526e83e9c098ad015756",
-                "reference": "5f75e457d9e522c9b080526e83e9c098ad015756",
+                "url": "https://api.github.com/repos/RT-Group-Tech/dbconnect/zipball/781a14f4d392ab4f7e2b667d28d8d96537891b46",
+                "reference": "781a14f4d392ab4f7e2b667d28d8d96537891b46",
                 "shasum": ""
             },
             "require": {
@@ -629,7 +629,7 @@
                 "issues": "https://github.com/RT-Group-Tech/dbconnect/issues",
                 "source": "https://github.com/RT-Group-Tech/dbconnect/tree/master"
             },
-            "time": "2023-09-27T12:21:04+00:00"
+            "time": "2023-10-03T17:33:10+00:00"
         },
         {
             "name": "rtgroup/http-router",
@@ -637,16 +637,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/RT-Group-Tech/http-router.git",
-                "reference": "d5b51a7c5e9e698e94c812bc19a4926dc2e5a895"
+                "reference": "0a47b523205c3ca09dcb770e8514b70e9b571e11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RT-Group-Tech/http-router/zipball/d5b51a7c5e9e698e94c812bc19a4926dc2e5a895",
-                "reference": "d5b51a7c5e9e698e94c812bc19a4926dc2e5a895",
+                "url": "https://api.github.com/repos/RT-Group-Tech/http-router/zipball/0a47b523205c3ca09dcb770e8514b70e9b571e11",
+                "reference": "0a47b523205c3ca09dcb770e8514b70e9b571e11",
                 "shasum": ""
             },
             "require": {
                 "curl/curl": "^2.5",
+                "ext-curl": "*",
                 "php": ">=8.0"
             },
             "default-branch": true,
@@ -668,7 +669,7 @@
                 "issues": "https://github.com/RT-Group-Tech/http-router/issues",
                 "source": "https://github.com/RT-Group-Tech/http-router/tree/master"
             },
-            "time": "2023-09-28T15:22:31+00:00"
+            "time": "2023-10-04T10:50:54+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
