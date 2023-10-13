@@ -1,22 +1,57 @@
 {
-    "name": "rtgroup/biotime-api",
-    "type": "library",
+    "name": "biotime/api",
     "autoload": {
         "psr-4": {
-            "Rtgroup\\BiotimeApi\\": "src/"
+            "Biotime\\Api\\": "src/"
         }
     },
     "authors": [
         {
             "name": "Gaston Delimond"
+        },
+        {
+            "name": "Lionnel nawej"
         }
     ],
-    "require": {
-        "rtgroup/dbconnect": "dev-master",
-        "rtgroup/http-router": "dev-master",
-        "guzzlehttp/guzzle": "^7.8"
-    },
     "repositories": [
+        {
+            "type":"git",
+            "url" :"https://github.com/RT-Group-Tech/payroll-services.git"
+        },
+        {
+            "type":"git",
+            "url" :"https://github.com/RT-Group-Tech/payroll-agences.git"
+        },
+        {
+            "type":"git",
+            "url" :"https://github.com/RT-Group-Tech/payroll-agents.git"
+        },
+        {
+            "type":"git",
+            "url" :"https://github.com/RT-Group-Tech/payroll-baremes.git"
+        },
+        {
+            "type":"git",
+            "url" :"https://github.com/RT-Group-Tech/payroll-pointages.git"
+        },
+        {
+            "type":"git",
+            "url" :"https://github.com/RT-Group-Tech/payroll-config.git"
+        }
 
-    ]
+    ],
+    "require": {
+        "rtgroup/dbconnect"         : "dev-master",
+        "rtgroup/http-router"       : "dev-master",
+        "guzzlehttp/guzzle"         : "^7.8",
+        "rtgroup/payroll-services"  :"dev-master",
+        "rtgroup/payroll-agences"   :"dev-master",
+        "rtgroup/payroll-agents"    : "dev-master",
+        "rtgroup/payroll-baremes"   : "dev-master",
+        "rtgroup/payroll-pointages" : "dev-master",
+        "rtgroup/payroll-config"    : "dev-master"
+    },
+    "minimum-stability"             : "dev",
+    "prefer-source"                 : true
+    
 }
