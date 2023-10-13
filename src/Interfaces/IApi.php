@@ -1,6 +1,6 @@
 <?php
 
-namespace Rtgroup\BiotimeApi\Interfaces;
+namespace Biotime\Api\Interfaces;
 
 abstract class IApi
 {
@@ -45,6 +45,31 @@ abstract class IApi
      **/
     public abstract function createDepartment():void;
 
+     /**
+     * CREATE New agence
+     * @return void
+     **/
+    public abstract function createAgence():void;
+
+     /**
+     * CREATE New Agents
+     * @return void
+     **/
+    public abstract function createAgent():void;
+    /**
+     * CREATE New fonction
+     * @return void
+     **/
+    public abstract function createFonction():void;
+
+       /**
+     * Add dispositifss
+     * @return void 
+     **/
+    public abstract function addDispositif():void;
+
+
+
 
     /**
      * List of all Department
@@ -60,15 +85,6 @@ abstract class IApi
      **/
     public abstract function createArea():void;
 
-
-    /**
-     * List of all Areas
-     * @return void
-     **/
-    public abstract function getAreas():void;
-
-
-
     /**
      * Synchronize all devices data
      * @return void
@@ -81,13 +97,41 @@ abstract class IApi
      */
     public abstract function uploadTransaction():void;
 
-
-
-
     /**
      * Calcul les données des presences des agents pour les statistiques
      * @return void
      */
     public  abstract  function calculatePresence():void;
+
+
+    /**
+     * Les données de recuperation de departement
+     * @return void
+     */
+    public  abstract  function getDepartment():void;
+
+    /**
+     * Les données de recuperation des agences
+     * @return void
+     */
+    public  abstract  function getAgence():void;
+
+    /**
+     * Les données de recuperation des agents
+     * @return void
+     */
+    public  abstract  function getAgent():void;
+
+    /**
+     * Les données de recuperation des fonctions
+     * @return void
+     */
+    public  abstract  function getFonction():void;
+
+    /**
+     * Les données de recuperation des zones
+     * @return void
+     */
+    public  abstract  function getArea():void; 
 
 }
