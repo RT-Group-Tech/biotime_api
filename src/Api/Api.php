@@ -71,13 +71,13 @@ class Api extends IApi
         if($result != null){
             $this->loadData("response", [
                 "status"=>"success",
-                "datas"=>$result
+                "auth"=>$result
             ]);
         }
         else{
             $this->loadData("response", [
                 "status"=>"failed",
-                "data"=>$result
+                "auth"=>$result
             ]);
         }
     }
