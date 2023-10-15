@@ -3,12 +3,13 @@
 *Lionnel nawej
 *Interaction entre biotime et millenium payroll
 */
-namespace Biotime\Api;
+namespace Rtgroup\BiotimeApi\Api;
 
-use Biotime\Api\Core\Util;
-use Biotime\Api\Interfaces\IApi;
+
 use Exception;
 use GuzzleHttp\Exception\GuzzleException;
+use Rtgroup\BiotimeApi\Core\Util;
+use Rtgroup\BiotimeApi\Interfaces\IApi;
 use Rtgroup\Dbconnect\Dbconfig;
 use Rtgroup\Dbconnect\Dbconnect;
 use Rtgroup\HttpRouter\DataLoader;
@@ -40,6 +41,7 @@ class Api extends IApi
      * GET JWT AUth token from Biotime authenticate
      *
      * @throws Exception
+     * @throws GuzzleException
      */
     public function jwtAuthToken(): void
     {
@@ -96,6 +98,7 @@ class Api extends IApi
     /**
      * GET List of all Devices
      * @throws Exception
+     * @throws GuzzleException
      */
     public function getDevices(): void
     {
@@ -107,6 +110,7 @@ class Api extends IApi
      * GET List of all employees
      *
      * @throws Exception
+     * @throws GuzzleException
      */
     public function getEmployees(): void
     {
@@ -118,6 +122,7 @@ class Api extends IApi
      * CREATE New employee
      *
      * @throws Exception
+     * @throws GuzzleException
      */
     public function createEmployee(): void
     {
@@ -168,7 +173,10 @@ class Api extends IApi
 
     /**
      * CREATE New Department - lionnel nawej-
-     **/
+     *
+     * @throws Exception
+     * @throws GuzzleException
+     */
     public function createDepartment(): void{
    
        $url="http://127.0.0.1:8081/personnel/api/departments/";
@@ -192,7 +200,9 @@ class Api extends IApi
        
     }
 
-    /**CREATE AGENCE -Lionnel nawej- */
+    /**CREATE AGENCE -Lionnel nawej-
+     * @throws Exception
+     */
     public function createAgence():void {
        
        $agences=new Agences();
@@ -214,7 +224,10 @@ class Api extends IApi
 
        $this->loadDataBioMil($reponseBiotime,$reponseMillenium);
     }
-    /**CREATE FONCTION - LIONNEL NAWEJ 11/10/2023 */
+
+    /**CREATE FONCTION - LIONNEL NAWEJ 11/10/2023
+     * @throws Exception
+     */
 
     public function createFonction():void{
        $agents=new Agents();
@@ -230,8 +243,6 @@ class Api extends IApi
             // create position biotime
             $url="http://127.0.0.1:8081/personnel/api/positions/";
     
-            
-    
             $data['position_code']=$_POST['fonction_code'];
             $data['position_name']=$_POST['libelle'];
     
@@ -244,7 +255,9 @@ class Api extends IApi
        $this->loadDataBioMil($reponseBiotime,$reponseMillenium);
     }
 
-    /**CREATE AGENT - LIONNELNAWEJ- 11/10/2023 */
+    /**CREATE AGENT - LIONNELNAWEJ- 11/10/2023
+     * @throws Exception
+     */
     public function createAgent(): void{
          
         /**CREATION EMPLOYE DANS BIOTIME*/
@@ -328,7 +341,7 @@ class Api extends IApi
     /**
      * List of all Department
      *
-     * @throws Exception
+     * @throws Exception|GuzzleException
      */
     public function getDepartments(): void
     {
@@ -340,7 +353,7 @@ class Api extends IApi
     /**
      * CREATE New Area
      *
-     * @throws Exception
+     * @throws Exception|GuzzleException
      */
     public function createArea(): void
     {
@@ -372,6 +385,7 @@ class Api extends IApi
      * List of all Areas
      *
      * @throws Exception
+     * @throws GuzzleException
      */
     public function getArea(): void
     {
@@ -389,30 +403,36 @@ class Api extends IApi
         $url="http://127.0.0.1:8081/personnel/api/";
         $this->getRequest(url: $url);*/
     }
-       /**
+
+    /**
      * List of agent
      *LIONNEL NAWEJ 13/10/2023
      * @throws Exception
+     * @throws GuzzleException
      */
     public function getAgent(): void
     {
         $url="http://127.0.0.1:8081/personnel/api/employees/";
         $this->getRequest(url: $url);
     }
-         /**
+
+    /**
      * List of agent
      *LIONNEL NAWEJ 13/10/2023
      * @throws Exception
+     * @throws GuzzleException
      */
     public function getFonction(): void
     {
         $url="http://127.0.0.1:8081/personnel/api/positions/";
         $this->getRequest(url: $url);
     }
-          /**
+
+    /**
      * List of agent
      *LIONNEL NAWEJ 13/10/2023
      * @throws Exception
+     * @throws GuzzleException
      */
     public function getDepartment(): void
     {
@@ -421,14 +441,11 @@ class Api extends IApi
     }
 
 
-
-
-
-
     /**
      * Synchronize all devices data
      * @return void
      * @throws Exception
+     * @throws GuzzleException
      */
     public function uploadAll(): void
     {
@@ -441,6 +458,7 @@ class Api extends IApi
      * Transaction upload
      * @return void
      * @throws Exception
+     * @throws GuzzleException
      */
     public function uploadTransaction(): void
     {
@@ -480,6 +498,7 @@ class Api extends IApi
      * @param string $url
      * @return void
      * @throws Exception
+     * @throws GuzzleException
      */
     private function getRequest(string $url) : void{
         $token = $this->getHeader('Authorization');
@@ -507,7 +526,10 @@ class Api extends IApi
      * Gestion token pour les methodes en post
     */
 
-    public function postRequest($url,$data){
+    /**
+     * @throws GuzzleException
+     */
+    public function postRequest($url, $data){
 
         $token = $this->getHeader('Authorization');
         if($token != null){
@@ -522,7 +544,8 @@ class Api extends IApi
     /* - lionnel nawej- 10/10/2023
     * Gestion du retour loadData de la reponse biotime & millenium
     */
-    public function loadDataBioMil($reponseBiotime,$reponseMillenium){
+    public function loadDataBioMil($reponseBiotime,$reponseMillenium): void
+    {
         if($reponseMillenium){
 
             $this->loadData("response", [
@@ -543,6 +566,7 @@ class Api extends IApi
 
     /**
      * @throws Exception
+     * @throws GuzzleException
      */
     private function triggerUpload(string $url):void
     {
@@ -573,23 +597,9 @@ class Api extends IApi
             throw new Exception("token invalide.",203);
         }
     }
-    public function dispatchData($url,$results){
-        
-        $this->loadData("response", [
-            "status"=>"success",
-            "results"=>$results
-        ]);
-
-    }
-
-    /**
-     * @throws GuzzleException
-     */
-    public function testRequest(): void
+    public function dispatchData($url,$results): void
     {
-        //echo "re";
         
-        $results = Util::fetch("https://jsonplaceholder.typicode.com/posts");
         $this->loadData("response", [
             "status"=>"success",
             "results"=>$results

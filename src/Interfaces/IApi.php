@@ -1,6 +1,6 @@
 <?php
 
-namespace Biotime\Api\Interfaces;
+namespace Rtgroup\BiotimeApi\Interfaces;
 
 abstract class IApi
 {

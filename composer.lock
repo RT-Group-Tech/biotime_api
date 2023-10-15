@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "230c482be2e90d956a12cd7d75079bd2",
+    "content-hash": "eb8cf41eb4ad7c05111f3bcaf4c199bc",
     "packages": [
         {
             "name": "curl/curl",
@@ -66,16 +66,16 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "7.8.0",
+            "version": "7.9.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "1110f66a6530a40fe7aea0378fe608ee2b2248f9"
+                "reference": "d95d9ab74822c2ca06b31477cd6775a4a299b8e8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/1110f66a6530a40fe7aea0378fe608ee2b2248f9",
-                "reference": "1110f66a6530a40fe7aea0378fe608ee2b2248f9",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/d95d9ab74822c2ca06b31477cd6775a4a299b8e8",
+                "reference": "d95d9ab74822c2ca06b31477cd6775a4a299b8e8",
                 "shasum": ""
             },
             "require": {
@@ -172,7 +172,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/guzzle/issues",
-                "source": "https://github.com/guzzle/guzzle/tree/7.8.0"
+                "source": "https://github.com/guzzle/guzzle/tree/7.8"
             },
             "funding": [
                 {
@@ -188,20 +188,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-08-27T10:20:53+00:00"
+            "time": "2023-09-11T09:12:01+00:00"
         },
         {
             "name": "guzzlehttp/promises",
-            "version": "2.0.1",
+            "version": "2.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/promises.git",
-                "reference": "111166291a0f8130081195ac4556a5587d7f1b5d"
+                "reference": "71b12f952d8be69a239989db2fe08314a5189e3b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/promises/zipball/111166291a0f8130081195ac4556a5587d7f1b5d",
-                "reference": "111166291a0f8130081195ac4556a5587d7f1b5d",
+                "url": "https://api.github.com/repos/guzzle/promises/zipball/71b12f952d8be69a239989db2fe08314a5189e3b",
+                "reference": "71b12f952d8be69a239989db2fe08314a5189e3b",
                 "shasum": ""
             },
             "require": {
@@ -211,6 +211,7 @@
                 "bamarni/composer-bin-plugin": "^1.8.1",
                 "phpunit/phpunit": "^8.5.29 || ^9.5.23"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "bamarni-bin": {
@@ -255,7 +256,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/promises/issues",
-                "source": "https://github.com/guzzle/promises/tree/2.0.1"
+                "source": "https://github.com/guzzle/promises/tree/2.0"
             },
             "funding": [
                 {
@@ -271,20 +272,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-08-03T15:11:55+00:00"
+            "time": "2023-08-27T10:15:36+00:00"
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "2.6.1",
+            "version": "2.6.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "be45764272e8873c72dbe3d2edcfdfcc3bc9f727"
+                "reference": "38ef514a6c21335f29d9be64b097d2582ecbf8e4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/be45764272e8873c72dbe3d2edcfdfcc3bc9f727",
-                "reference": "be45764272e8873c72dbe3d2edcfdfcc3bc9f727",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/38ef514a6c21335f29d9be64b097d2582ecbf8e4",
+                "reference": "38ef514a6c21335f29d9be64b097d2582ecbf8e4",
                 "shasum": ""
             },
             "require": {
@@ -305,6 +306,7 @@
             "suggest": {
                 "laminas/laminas-httphandlerrunner": "Emit PSR-7 responses"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "bamarni-bin": {
@@ -371,7 +373,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/psr7/issues",
-                "source": "https://github.com/guzzle/psr7/tree/2.6.1"
+                "source": "https://github.com/guzzle/psr7/tree/2.6"
             },
             "funding": [
                 {
@@ -387,11 +389,11 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-08-27T10:13:57+00:00"
+            "time": "2023-09-10T16:11:14+00:00"
         },
         {
             "name": "psr/http-client",
-            "version": "1.0.3",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/http-client.git",
@@ -407,6 +409,7 @@
                 "php": "^7.0 || ^8.0",
                 "psr/http-message": "^1.0 || ^2.0"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -443,22 +446,23 @@
         },
         {
             "name": "psr/http-factory",
-            "version": "1.0.2",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/http-factory.git",
-                "reference": "e616d01114759c4c489f93b099585439f795fe35"
+                "reference": "7037f4b0950474e9d1350e8df89b15f1842085f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/http-factory/zipball/e616d01114759c4c489f93b099585439f795fe35",
-                "reference": "e616d01114759c4c489f93b099585439f795fe35",
+                "url": "https://api.github.com/repos/php-fig/http-factory/zipball/7037f4b0950474e9d1350e8df89b15f1842085f6",
+                "reference": "7037f4b0950474e9d1350e8df89b15f1842085f6",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.0.0",
                 "psr/http-message": "^1.0 || ^2.0"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -480,7 +484,7 @@
                     "homepage": "https://www.php-fig.org/"
                 }
             ],
-            "description": "Common interfaces for PSR-7 HTTP message factories",
+            "description": "PSR-17: Common interfaces for PSR-7 HTTP message factories",
             "keywords": [
                 "factory",
                 "http",
@@ -492,13 +496,13 @@
                 "response"
             ],
             "support": {
-                "source": "https://github.com/php-fig/http-factory/tree/1.0.2"
+                "source": "https://github.com/php-fig/http-factory"
             },
-            "time": "2023-04-10T20:10:41+00:00"
+            "time": "2023-09-22T11:16:44+00:00"
         },
         {
             "name": "psr/http-message",
-            "version": "2.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/http-message.git",
@@ -513,6 +517,7 @@
             "require": {
                 "php": "^7.2 || ^8.0"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -599,12 +604,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/RT-Group-Tech/dbconnect.git",
-                "reference": "781a14f4d392ab4f7e2b667d28d8d96537891b46"
+                "reference": "f19cb9d886723c405f8b74a12d83215c37c68a9c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RT-Group-Tech/dbconnect/zipball/781a14f4d392ab4f7e2b667d28d8d96537891b46",
-                "reference": "781a14f4d392ab4f7e2b667d28d8d96537891b46",
+                "url": "https://api.github.com/repos/RT-Group-Tech/dbconnect/zipball/f19cb9d886723c405f8b74a12d83215c37c68a9c",
+                "reference": "f19cb9d886723c405f8b74a12d83215c37c68a9c",
                 "shasum": ""
             },
             "require": {
@@ -629,7 +634,7 @@
                 "issues": "https://github.com/RT-Group-Tech/dbconnect/issues",
                 "source": "https://github.com/RT-Group-Tech/dbconnect/tree/master"
             },
-            "time": "2023-10-03T17:33:10+00:00"
+            "time": "2023-10-13T15:39:46+00:00"
         },
         {
             "name": "rtgroup/http-router",
@@ -637,12 +642,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/RT-Group-Tech/http-router.git",
-                "reference": "0a47b523205c3ca09dcb770e8514b70e9b571e11"
+                "reference": "8cf8f0ceee277bc20440d5ddd0fedc45d5e18c2e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RT-Group-Tech/http-router/zipball/0a47b523205c3ca09dcb770e8514b70e9b571e11",
-                "reference": "0a47b523205c3ca09dcb770e8514b70e9b571e11",
+                "url": "https://api.github.com/repos/RT-Group-Tech/http-router/zipball/8cf8f0ceee277bc20440d5ddd0fedc45d5e18c2e",
+                "reference": "8cf8f0ceee277bc20440d5ddd0fedc45d5e18c2e",
                 "shasum": ""
             },
             "require": {
@@ -669,20 +674,230 @@
                 "issues": "https://github.com/RT-Group-Tech/http-router/issues",
                 "source": "https://github.com/RT-Group-Tech/http-router/tree/master"
             },
-            "time": "2023-10-04T10:50:54+00:00"
+            "time": "2023-10-13T09:28:49+00:00"
         },
         {
-            "name": "symfony/deprecation-contracts",
-            "version": "v3.0.2",
+            "name": "rtgroup/payroll-adresses",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/deprecation-contracts.git",
-                "reference": "26954b3d62a6c5fd0ea8a2a00c0353a14978d05c"
+                "url": "https://github.com/RT-Group-Tech/payroll-adresses.git",
+                "reference": "0b17b0549eca22059cc0cc0d9fcd5266fe8c3ff2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/26954b3d62a6c5fd0ea8a2a00c0353a14978d05c",
-                "reference": "26954b3d62a6c5fd0ea8a2a00c0353a14978d05c",
+                "url": "https://api.github.com/repos/RT-Group-Tech/payroll-adresses/zipball/0b17b0549eca22059cc0cc0d9fcd5266fe8c3ff2",
+                "reference": "0b17b0549eca22059cc0cc0d9fcd5266fe8c3ff2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0",
+                "rtgroup/dbconnect": "dev-master"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Rtgroup\\PayrollAdresses\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Chris Tenday",
+                    "email": "ctenday@gmail.com"
+                }
+            ],
+            "description": "Composant pour la gestion des adresses",
+            "support": {
+                "issues": "https://github.com/RT-Group-Tech/payroll-adresses/issues",
+                "source": "https://github.com/RT-Group-Tech/payroll-adresses/tree/master"
+            },
+            "time": "2023-10-05T12:49:09+00:00"
+        },
+        {
+            "name": "rtgroup/payroll-agences",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/RT-Group-Tech/payroll-agences.git",
+                "reference": "7c203775403ae1093d1cbe4f4d477b188f3c016a"
+            },
+            "require": {
+                "php": ">=8.0",
+                "rtgroup/dbconnect": "dev-master",
+                "rtgroup/http-router": "dev-master",
+                "rtgroup/payroll-adresses": "dev-master"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Rtgroup\\PayrollAgences\\": "src/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Chris Tenday",
+                    "email": "ctenday@gmail.com"
+                }
+            ],
+            "description": "Composation de gestion manipulation des agences",
+            "time": "2023-10-14T06:47:23+00:00"
+        },
+        {
+            "name": "rtgroup/payroll-agents",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/RT-Group-Tech/payroll-agents.git",
+                "reference": "029494d7c94ecbdff24afe404a89ca154a6a4cb6"
+            },
+            "require": {
+                "rtgroup/dbconnect": "dev-master",
+                "rtgroup/http-router": "dev-master",
+                "rtgroup/payroll-adresses": "dev-master"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Rtgroup\\PayrollAgents\\": "src/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Chris Tenday",
+                    "email": "ctenday@gmail.com"
+                }
+            ],
+            "description": "Composant: Gestion des agents",
+            "time": "2023-10-12T15:53:09+00:00"
+        },
+        {
+            "name": "rtgroup/payroll-baremes",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/RT-Group-Tech/payroll-baremes.git",
+                "reference": "8e322498777f206a50dfcbf5ffd84cc7bb51e951"
+            },
+            "require": {
+                "rtgroup/dbconnect": "dev-master",
+                "rtgroup/http-router": "dev-master"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Rtgroup\\PayrollBaremes\\": "src/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Chris Tenday",
+                    "email": "ctenday@gmail.com"
+                }
+            ],
+            "description": "Gestion & manipulation des baremes",
+            "time": "2023-10-12T15:46:34+00:00"
+        },
+        {
+            "name": "rtgroup/payroll-config",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/RT-Group-Tech/payroll-config.git",
+                "reference": "9146a734cf4d687ce3f0e1a4920f18db381eeac9"
+            },
+            "require": {
+                "rtgroup/dbconnect": "dev-master",
+                "rtgroup/http-router": "dev-master"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Rtgroup\\PayrollConfig\\": "src/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Chris Tenday",
+                    "email": "ctenday@gmail.com"
+                }
+            ],
+            "time": "2023-10-05T12:45:10+00:00"
+        },
+        {
+            "name": "rtgroup/payroll-pointages",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/RT-Group-Tech/payroll-pointages.git",
+                "reference": "87eea79926562e9d25d61d39e95fa65306baf69d"
+            },
+            "require": {
+                "rtgroup/dbconnect": "dev-master",
+                "rtgroup/http-router": "dev-master",
+                "rtgroup/payroll-agences": "dev-master"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Rtgroup\\PayrollPointages\\": "src/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Chris Tenday",
+                    "email": "ctenday@gmail.com"
+                }
+            ],
+            "description": "Composant de gestion des pointages",
+            "time": "2023-10-14T19:20:18+00:00"
+        },
+        {
+            "name": "rtgroup/payroll-services",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/RT-Group-Tech/payroll-services.git",
+                "reference": "c1cc8e4c167a5db3c70a58de1f29df096e07a070"
+            },
+            "require": {
+                "rtgroup/dbconnect": "dev-master",
+                "rtgroup/http-router": "dev-master"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Rtgroup\\PayrollServices\\": "src/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Chris Tenday",
+                    "email": "ctenday@gmail.com"
+                }
+            ],
+            "description": "Composant pour la gestion & manipulation des service",
+            "time": "2023-10-12T15:44:39+00:00"
+        },
+        {
+            "name": "symfony/deprecation-contracts",
+            "version": "3.0.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/deprecation-contracts.git",
+                "reference": "c30dd04b9a303689a26d7986f7cffce04203a107"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/c30dd04b9a303689a26d7986f7cffce04203a107",
+                "reference": "c30dd04b9a303689a26d7986f7cffce04203a107",
                 "shasum": ""
             },
             "require": {
@@ -720,7 +935,7 @@
             "description": "A generic function and convention to trigger deprecation notices",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.0.2"
+                "source": "https://github.com/symfony/deprecation-contracts/tree/3.0"
             },
             "funding": [
                 {
@@ -736,15 +951,21 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-01-02T09:55:41+00:00"
+            "time": "2023-01-01T08:36:10+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": {
         "rtgroup/dbconnect": 20,
-        "rtgroup/http-router": 20
+        "rtgroup/http-router": 20,
+        "rtgroup/payroll-services": 20,
+        "rtgroup/payroll-agences": 20,
+        "rtgroup/payroll-agents": 20,
+        "rtgroup/payroll-baremes": 20,
+        "rtgroup/payroll-pointages": 20,
+        "rtgroup/payroll-config": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

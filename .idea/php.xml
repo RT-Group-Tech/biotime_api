@@ -24,6 +24,13 @@
       <path value="$PROJECT_DIR$/vendor/rtgroup/dbconnect" />
       <path value="$PROJECT_DIR$/vendor/rtgroup/http-router" />
       <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/rtgroup/payroll-agents" />
+      <path value="$PROJECT_DIR$/vendor/rtgroup/payroll-services" />
+      <path value="$PROJECT_DIR$/vendor/rtgroup/payroll-adresses" />
+      <path value="$PROJECT_DIR$/vendor/rtgroup/payroll-baremes" />
+      <path value="$PROJECT_DIR$/vendor/rtgroup/payroll-pointages" />
+      <path value="$PROJECT_DIR$/vendor/rtgroup/payroll-agences" />
+      <path value="$PROJECT_DIR$/vendor/rtgroup/payroll-config" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.0">
