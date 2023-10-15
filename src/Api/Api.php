@@ -202,6 +202,7 @@ class Api extends IApi
 
     /**CREATE AGENCE -Lionnel nawej-
      * @throws Exception
+     * @throws GuzzleException
      */
     public function createAgence():void {
        
@@ -227,6 +228,7 @@ class Api extends IApi
 
     /**CREATE FONCTION - LIONNEL NAWEJ 11/10/2023
      * @throws Exception
+     * @throws GuzzleException
      */
 
     public function createFonction():void{
