@@ -63,15 +63,15 @@ class Api extends IApi
         /** @var array $data */
 
         $data = [
-            "username"=> 'millenium',
-            "password"=> 'mille@2023'
+            "username"=> $_POST['username'],
+            "password"=> $_POST['password']
         ];
 
         $result = Util::post(url: $url, data:$data);
         if($result != null){
             $this->loadData("response", [
                 "status"=>"success",
-                "data"=>$result
+                "datas"=>$result
             ]);
         }
         else{
