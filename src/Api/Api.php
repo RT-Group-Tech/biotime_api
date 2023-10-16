@@ -319,7 +319,6 @@ class Api extends IApi
             $agent_id=$agents->addNew();
             $reponseAffecter=$agents->affecter($agent_id);
 
-            var_dump($reponseAffecter);
             $this->loadDataBioMil($reponseBiotime,$reponseAffecter);
 
         }
