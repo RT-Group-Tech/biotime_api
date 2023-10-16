@@ -280,7 +280,6 @@ class Api extends IApi
         HttpRequest::checkRequiredData("periode_unite");
         HttpRequest::checkRequiredData("code_zone");
 
-
         HttpRequest::checkRequiredData("agence_id"); //TODO:check
         HttpRequest::checkRequiredData("fonction_id"); //TODO: check.
         HttpRequest::checkRequiredData("service_id"); //TODO: check.
@@ -291,7 +290,7 @@ class Api extends IApi
 
         $data = [
             "emp_code" => $_POST['matricule'],
-            "area" => $_POST['code_zone'],
+            "area" => (int)$_POST['code_zone'],
             "first_name" => $_POST['nom'],
             "last_name" => $_POST['postnom'],
             "nickname" => $_POST['prenom'],
