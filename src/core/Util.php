@@ -26,17 +26,24 @@ class Util
      * @param string $url biotime api url
      * @return mixed biotime jsonData
      *
-     * @throws GuzzleException
      */
     public static function fetch(string $url, $token=null) :mixed
     {
         $client = new Client();
-        $response = $client->request(method: 'GET', uri: $url,options: [
-            'headers' => [
-                'Authorization'=>$token,
-                'Accept'     => 'application/json',
-            ]
-        ]);
+        $response = null;
+
+        try {
+            $response = $client->request(method: 'GET', uri: $url,options: [
+                'headers' => [
+                    'Authorization'=>$token,
+                    'Accept'     => 'application/json',
+                ]
+            ]);
+        }
+        catch (GuzzleException $e){
+            echo 'request error'.$e->getMessage();
+            return null;
+        }
         return json_decode($response->getBody());
     }
 
@@ -46,19 +53,25 @@ class Util
      * @param string $url biotime api url
      * @return mixed biotime jsonData
      *
-     * @throws GuzzleException
      */
 
     public static function post(string $url, Array $data, $token=null) : mixed
     {
         $client = new Client();
-        $response = $client->request(method: 'POST', uri: $url,options: [
-            'headers' => [
-                'Authorization'=>$token,
-                'Accept'     => 'application/json',
-            ],
-            'form_params'=>$data
-        ]);
+
+        $response = null;
+        try {
+            $response= $client->request(method: 'POST', uri: $url,options: [
+                'headers' => [
+                    'Authorization'=>$token,
+                    'Accept'     => 'application/json',
+                ],
+                'form_params'=>$data
+            ]);
+        }catch (GuzzleException $e){
+            echo 'request error :::'.$e->getMessage();
+            return null;
+        }
         return json_decode($response->getBody());
     }
 }
