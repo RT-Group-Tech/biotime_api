@@ -209,8 +209,21 @@ class Api extends IApi
        $agences=new Agences();
        $reponseMillenium=$agences->add();
 
+        if($reponseMillenium){
+            $this->loadData("response", [
+                "status"           =>"success",
+                "response" => $reponseMillenium
+            ]);
+        }
+        else{
+            $this->loadData("response", [
+                "status"           =>"failed",
+                "message" =>  "erreur lors du traitement"
+            ]);
+        }
+
        /**CREATION ZONE DANS BIOTIME */
-       if($reponseMillenium){
+       /*if($reponseMillenium){
         $url="http://127.0.0.1:8081/personnel/api/areas/";
 
         HttpRequest::checkRequiredData("code_zone");
@@ -221,9 +234,8 @@ class Api extends IApi
         ];
          //Check token du post et matching
          $reponseBiotime=$this->postRequest($url,$data);
-       }
-
-       $this->loadDataBioMil($reponseBiotime,$reponseMillenium);
+       }*/
+        // $this->loadDataBioMil($reponseBiotime,$reponseMillenium);
     }
 
     /**CREATE FONCTION - LIONNEL NAWEJ 11/10/2023
