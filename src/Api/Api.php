@@ -184,7 +184,7 @@ class Api extends IApi
         HttpRequest::checkRequiredData("dept_code");
         HttpRequest::checkRequiredData("nom");
 
-        $data['dept_code']=(int)$_POST['dept_code'];
+        $data['dept_code']=$_POST['dept_code'];
         $data['dept_name']=$_POST['nom'];
         $data['parent_dept']=null;
         //Check token du post
