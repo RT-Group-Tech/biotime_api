@@ -202,7 +202,6 @@ class Api extends IApi
 
     /**CREATE AGENCE -Lionnel nawej-
      * @throws Exception
-     * @throws GuzzleException
      */
     public function createAgence():void {
        
@@ -211,14 +210,14 @@ class Api extends IApi
 
         if($reponseMillenium){
             $this->loadData("response", [
-                "status"           =>"success",
-                "response" => $reponseMillenium
+                "status"        =>  "success",
+                "response"      =>  $reponseMillenium
             ]);
         }
         else{
             $this->loadData("response", [
-                "status"           =>"failed",
-                "message" =>  "erreur lors du traitement"
+                "status"           => "failed",
+                "message"          => "echec du traitement !"
             ]);
         }
 
